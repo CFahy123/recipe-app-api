@@ -3,7 +3,9 @@ from core.models import Tag
 
 
 class TagSerializer(serializers.ModelSerializer):
-    """Serializer for tag objects"""
+    """Serializer for tag object"""
+
     class Meta:
         model = Tag
-        fields = ('__all__')
+        fields = ('id', 'name')
+        read_only_fields = ('id',)
